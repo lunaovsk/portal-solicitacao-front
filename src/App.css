@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --font-heading: 'Manrope', 'DM Sans', Arial, sans-serif;
+    --color-ink: #1a1a1a;
+  --color-muted: #666666;
+  --color-soft: #ffffff; 
+  --color-white: #ffffff;
+  --color-border: #e0e0e0;
+  --color-input: #f9f9f9;
+  --color-focus: #1a1a1a;
+  --color-blue: #1a1a1a;
+  --color-navy: #1a1a1a;
+  
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-panel: 0 2px 8px rgba(0, 0, 0, 0.05);
+  
+  --page-width: 1180px;
+  --page-gutter: 48px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --ink: var(--color-ink);
+  --muted: var(--color-muted);
+  --line: var(--color-border);
+  --blue: var(--color-blue);
+  --cream: #ffffff;
+  --navy: var(--color-navy);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-soft);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page {
+  margin: 0 auto;
+  padding: 48px 0 70px;
+  width: min(var(--page-width), calc(100% - var(--page-gutter)));
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+}
+
+.home-heading {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.home-heading h1 {
+  color: var(--navy);
+  font-size: clamp(30px, 4vw, 44px);
+  letter-spacing: -2px;
+  margin: 8px 0 9px;
+}
+
+.home-heading p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.home-error {
+  color: #bd5b5b !important;
+  font-size: 11px !important;
+  max-width: 260px;
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .home-page {
+    padding-top: 34px;
+    width: min(100% - 32px, 600px);
+  }
+
+  .home-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
